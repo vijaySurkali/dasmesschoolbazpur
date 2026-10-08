@@ -1,0 +1,842 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+   --primary-font: "Manrope", sans-serif;
+    --primary-color-1:#641320;
+    --primary-color-2:#F0F5F2;
+    --font-primary-color:#fff;
+}
+
+/* Large screens (Desktops & Monitors) */
+@media (max-width: 1300px) {
+    .navbar-header-content .stander-navbar nav ul{
+         display: none;
+   }
+   .menu-navbar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10000;
+    }
+
+    .menu-navbar .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 24px;
+        cursor: pointer;
+        z-index: 10000;
+        position: relative;
+    }
+
+    .menu .menu_1,
+    .menu .menu_2,
+    .menu .menu_3 {
+        border-radius: 25px;
+        background-color: #000;
+        transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+        position: absolute;
+        width: 28px;
+        height: 3px;
+    }
+    .menu .menu_1 {
+        transform: translateY(-8px);
+    }
+
+    .menu .menu_2 {
+        transform: translateY(0);
+    }
+
+    .menu .menu_3 {
+        transform: translateY(8px);
+    }
+    .menu-navbar .menu.show .menu_1 {
+        transform: rotate(48deg);
+    }
+
+    .menu-navbar .menu.show .menu_3 {
+        transform: rotate(-45deg);
+    }
+
+    .menu-navbar .menu.show .menu_2 {
+        opacity: 0;
+    }
+    .menu-navbar .menu.show .menu_1,
+    .menu-navbar .menu.show .menu_3 {
+        background-color: #000;
+    }
+  .responsive-navbar {
+        position: fixed;
+        top:170px;
+        left: 0;
+        width: 100vw;
+        height: 100dvh;
+        z-index: 1000;
+        display: flex;
+        background-color: var(--primary-bg-color);
+        flex-direction: column;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s ease, max-height 0.3s ease;
+    }
+
+    .responsive-navbar.show {
+        opacity: 1;
+        display: block;
+        max-height: 100vh;
+        animation: showHeight 0.3s ease forwards;
+        background-color: var(--primary-color-1);
+    }
+
+    body.menu-open {
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .responsive-navbar nav ul{
+        width:85%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:30px;
+        padding-top:50px;
+    }
+
+    .responsive-navbar nav ul li{
+        list-style-type: none;
+    }
+
+    .responsive-navbar nav ul li a{
+        text-decoration: none;
+        color:#fff;
+        font-family:var(--primary-font);
+        letter-spacing:1px;
+        font-size:17px;
+        padding:7px 25px;
+        transition:background-color .3s ease,font-weight .3s ease;
+    }
+    .responsive-navbar nav ul li a:hover{
+        background-color: #6C212D;
+        font-weight:300;
+    }
+   
+    .hero-video {
+        top:100px;
+    }
+    .hero-content{
+        height:25%;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .hero-content{
+       height:13%;
+    }
+    .hero-heading h1 {
+        font-size:40px;
+    }
+    .hero-heading h1 span{
+        font-size:50px;
+    }
+    .hero-para p {
+        font-size:20px;
+    }
+    .hero-btn a {
+        font-size:17px;
+    }
+    .latest-head h1{
+        font-size: 40px;
+    }
+    .about-heading h2{
+        font-size:40px;
+    }
+    .about-para p,
+    .mission-para p{
+        font-size:17px;
+    }
+    .mes-section{
+        width:90%;
+    }
+    .image-contain-principal img,
+    .image-contain-headmistress img{
+        width:380px;
+        height:380px;
+    }
+    .text-content .header h3{
+        font-size:40px;
+        line-height:50px;
+    }
+
+    .why-choose-para{
+        width:85%;
+    }
+    .details-icon img{
+        width:60px;
+        height:60px;
+    }
+    
+    .details-head span{
+        font-size:20px;
+    }
+    .details-para p{
+        font-size:16px;
+    }
+    .achievements-container{
+        padding-top:2.5rem;
+    }
+    .achievements-section{
+        padding:3rem 0rem;
+    }
+    .achievement-cap-logo img{
+        width:90px;
+    }
+    .achivement-head h1 span{
+        padding-left:8px;
+    }
+    .achievement-para p{
+        width:70%;
+    }
+    .event-head h1{
+        font-size:40px;
+    }
+    .event-image img {
+        width:380px;
+        height: 380px;
+    }
+    .visit-heading h1{
+        font-size:40px;
+    }
+    .visit-details-address{
+        gap:33px;
+    }
+    .visit-school-name p{
+        font-size:20px;
+    }
+    .visit-contact p span,
+    .visit-email p span,
+    .visit-timing p span{
+        font-size:18px;
+    }
+    .footer-name h1{
+        font-size:28px;
+    }
+}
+
+/* Laptops & Small Desktops */
+@media (max-width:1050px) {
+    .hero-para p {
+        width:60%;
+        line-height:30px;
+        font-size:19px;
+    }
+    .hero-btn{
+        margin-top:3rem;
+    }
+    .mes-section{
+        width:95%;
+    }
+    .text-content .header h3{
+        font-size:35px;
+        line-height:45px;
+    }
+    .why-choose-para{
+        width:90%;
+        font-size:38px;
+    }
+    .details-icon img{
+        width:50px;
+        height: 50px;
+    }
+    .achievement-para p{
+        width:85%;
+    }
+    .event-head h1{
+        font-size:38px;
+    }
+    .event-scroll-list{
+       margin-top:4rem;
+    }
+    .event-images-section{
+        gap:30px;
+    }
+    .event-image img {
+        width:340px;
+        height: 340px;
+    }
+    .event-name span{
+        font-size:18px;
+    }
+    .visit-heading h1{
+        font-size:38px;
+    }
+    .marquee-container{
+        margin-bottom:2.8rem;
+    }
+    .marquee-container img{
+        width:200px !important;
+    }
+}
+
+/* Tablets & Small Laptops */
+@media (max-width: 991px) {
+    .top-header-container{
+        height:78px;
+    }
+    .bottom-header-container{
+        top:78px;
+    }
+    .resp-line{
+       margin-left:25px;
+    }
+    .height-container{
+        width:100px;
+        height:1px;
+    }
+    .left-email-content .content-icon img,
+    .left-phone-content .content-icon img{
+        width:15px;
+        height: 15px;   
+    }
+    .left-email-content .content-icon img{
+        margin-top:4px;
+    }
+    .right-location-content .content-icon img,
+    .right-time-content .content-icon img{
+        width:16px;
+        height: 16px;
+    }
+    .top-left-header-content,
+    .top-right-header-content{
+        flex-direction: column;
+        gap:8px;
+        align-items: start;
+    }
+    .upper-header-content a{
+        font-size:14px;
+    }
+    .top-right-header-content{
+        align-items: end;
+    }
+    
+    .logo-header-content .school-logo img{
+        width:65px;
+        height:65px;
+    }
+    .logo-header-content .school-name h1{
+        font-size:18px;
+    }
+    .hero-heading h1{
+        font-size:34px;
+    }
+    .hero-heading h1 span{
+        font-size:44px;
+    }
+    .hero-para p {
+        width:80%;
+    }
+    .latest-head h1{
+        font-size:34px;
+    }
+    .latest-links-container{
+        width:100%;
+    }
+    .latest-news ul  li a{
+        font-size:17px;
+    }
+    .about-heading h2{
+        font-size:36px;
+    }
+    .mes-section {
+        width:95%;
+        margin-top:0rem;
+    }
+    .image-contain-principal img,
+    .image-contain-headmistress img{
+        width:360px;
+        height:360px;
+    }
+    .text-content .header h3{
+        font-size:27px;
+        line-height:30px;
+    }
+    .why-choose-para h2{
+        font-size:35px;
+        line-height:40px;
+    }
+    
+    .why-choose-details .top-cont,
+    .why-choose-details .bottom-cont{
+        flex-direction: column;
+        align-items: center;
+    }
+    .details-section{
+        width:380px;
+    }
+    .details-head span{
+        font-size:25px;
+    }
+    .details-para p{
+        font-size:20px
+    }
+}
+
+/* Mobile Devices */
+@media (max-width:864px) {
+    .hero-content{
+        gap:25px;
+    }
+    .latest-links-container{
+        flex-direction: column;
+        gap:60px;
+    }
+    .latest-news,
+    .important-list{
+        width:90%;
+    }
+
+    .about-section{
+        flex-direction: column;
+        gap:0px !important;
+    }
+    .school-image,
+    .about-content{
+        width:100%;
+    }
+    .school-image img{
+        width:100%;
+        height:470px;
+    }
+    .about-content{
+        height:570px;
+        margin-top:-.3rem;
+        padding-top:40px;
+    }
+
+    .mes-section{
+        width:98%;
+        margin: 0 auto;
+    }
+    .image-contain-principal,
+    .image-contain-headmistress{
+        align-self: flex-start;
+    }
+   
+    .image-contain-principal img,
+    .image-contain-headmistress img{
+        width:250px;
+        height:250px;
+    }
+    .text-content{
+        padding:0rem;
+    }
+    .text-content .header h3{
+        font-size:28px;
+        line-height:33px;
+    }
+    .achivement-head h1{
+        font-size:30px;
+    }
+    .achievement-para p{
+        width:100%;
+        font-size:17px;
+    }
+    .event-head h1{
+        font-size:32px;
+    }
+    .event-image img{
+        width:320px;
+        height:320px;
+    }
+    .event-name span{
+        font-size:17px;
+    }
+    .visit-map-section{
+        flex-direction: column;
+    }
+    .visit-heading h1{
+        font-size:32px;
+    }
+    .visit-school-name p{
+        font-size:19px;
+    }
+    .visit-section{
+        width:100%;
+        height:460px;
+    }
+    .map-section{
+        width:100%;
+        height:400px;
+    }
+    .map-section iframe{
+        height:400px;
+    }
+    .marquee-container{
+        height:150px;
+        margin-top:0rem !important;
+    }
+    .footer-section footer{
+        width:95%;
+    }
+    .footer-logo img{
+        width:65px;
+        height:65px;
+    }
+    .footer-name h1{
+        font-size:20px !important;
+    }
+    .footer-name span{
+        font-size:13px;
+    }
+    .footer-small-para{
+        padding-left:20px;
+    }
+    .footer-small-para p{
+        font-size:15px;
+    }
+    .footer-address{
+        padding-left:20px;
+    }
+    .footer-address-head h4{
+        font-size:16px;
+    }
+    .footer-social-link{
+        padding-left: 20px;
+    }
+    .footer-links-div{
+        width:100%;
+    }
+}
+/* Small Phones */
+@media (max-width:664px) {
+    .phone-links img,
+    .whatsapp-links  img{
+        width:45px;
+        height: 45px;
+    }
+    .video-overlay{
+        height: 100dvh;
+    }
+    .hero-content{
+        height:13%;
+    }
+    .hero-heading h1{
+        font-size:28px;
+    }
+    .hero-heading h1 span{
+        font-size:38px;
+        padding-right:2px;
+        padding-left:3px;
+    }
+    .latest-head h1{
+        font-size:28px;
+    }
+    .why-choose-para h2{
+        font-size:24px;
+    }
+    .details-head span{
+        font-size:21px;
+    }
+    .details-para p{
+        font-size:18px;
+    }
+    .event-head h1{
+        font-size:28px;
+    }
+    .event-scroll-list{
+        margin-top: 3rem;
+    }
+    .event-image img {
+        width:290px;
+        height:290px;
+    }
+    .event-name span{
+        font-size:16px;
+        word-spacing:3px;
+        padding-left:0px;
+    }
+    .event-read a{
+        padding:8px 16px;
+    }
+    .visit-map-container{
+        margin-top:2rem;
+    }
+    .visit-section{
+        height:450px;
+    }
+    .visit-details{
+        gap:30px;
+    }
+    .visit-heading h1{
+        font-size:28px;
+    }
+    .visit-details-address{
+        gap:25px;
+    }
+    .map-section{
+        height:340px;
+    }
+    .map-section iframe{
+        height:380px;
+    }
+    .marquee-container{
+        height:100px;
+        margin-top:0rem;
+    }
+    .marquee-container img{
+        width:170px !important;
+    }
+    .footer-upper-section{
+        flex-direction: column;
+        gap:50px;
+    }
+   
+}
+@media (max-width: 576px) {
+    .upper-header-email,
+    .height-container,
+    .upper-header-num,
+    .right-time-content{
+        display: none;
+    }
+    .top-left-header-content{
+        flex-direction: row;
+        align-items: center;
+        justify-content:center;
+        gap:12px;
+    }
+    .left-email-content .content-icon img{
+        margin-top:4px;
+        width:19px;
+        height:19px;
+    }
+    .left-phone-content .content-icon img{
+        margin-top:3px;
+    }
+    .top-header-container{
+        height:55px;
+    }
+    .bottom-header-container{
+        top:55px;
+    }
+    .logo-header-content .school-logo img{
+        width:45px;
+        height:45px;
+    }
+    .logo-header-content .school-name h1{
+        font-size:18px;
+    }
+    
+    .logo-header-content .school-name span{
+        font-size:12px;
+    }
+    .hero-video{
+        height:100dvh;
+    } 
+ 
+    .hero-heading h1{
+        font-size:21px;
+        width:95%;
+    }
+    .hero-heading h1 span{
+        font-size:27px;
+    }
+    .hero-para p {
+        width:100%;
+        font-size:18px;
+    }
+    .phone-whatsapp{
+        right:10px;
+    }
+    .latest-news-links-container{
+        margin-top:3.5rem !important;
+    }
+    .latest-head h1{
+        font-size:21px;
+        line-height:28px;
+    }
+    .latest-news,
+    .important-list {
+        width:100%;
+    }
+    .latest-news ul  li a{
+        font-size:16px;
+    }
+    .important-list h3,
+    .mission-heading h3{
+        font-size:20px;
+    }
+    .school-image img{
+        height:300px;
+    }
+    .about-details,
+    .mission-statement{
+        width:90%;
+    }
+    .about-heading h2{
+        font-size:22px;
+    }
+    .about-content{
+        height: auto;
+        padding-bottom:40px;
+    }
+    .about-para p,
+    .mission-para p{
+        font-size:16px;
+    }
+    .known_more_btn{
+        width:120px;
+        height:40px;
+    }
+    .message-container{
+        padding:0rem;
+    }
+    .mes-section{
+        margin-top:0rem;
+        width:90%;
+        margin: 0 auto;
+    }
+    .principal-mes,
+    .headmistress-mes{
+        flex-direction: column;
+        gap:20px;
+    }
+    .image-contain-principal img,
+    .image-contain-headmistress img{
+        width:200px;
+        height: 200px;
+    }
+    .text-content .header h3{
+        font-size:20px;
+    }
+    .text-content .message-body p{
+        font-size:16px;
+        line-height:25px;
+    }
+    .principal-details-1 .name{
+        font-size:17px;
+    }
+    .standard-img{
+        display: none;
+    }
+    .text-content .resp-image{
+        display: block;
+    }
+    .why-choose-container{
+        padding:5rem 0rem;
+    }
+    .why-choose-para{
+        width:100%;
+    }
+    .why-choose-para h2{
+        font-size:18px;
+        line-height:30px;
+    }
+    .why-choose-details{
+        width:90%;
+        margin: 0 auto;
+        margin-top:2rem;
+    }
+    .details-section{
+        width:300px;
+        height:300px;
+        gap:25px;
+    }
+    .details-head span{
+        font-size:18px;
+    }
+    .details-para p{
+        font-size:16px;
+    }
+    .achievements-container{
+        padding-top:0rem;
+    }
+    .achievement-cap-logo img{
+        width:70px;
+    }
+    .achivement-head h1{
+        font-size:22px;
+    }
+    .achievement-para p{
+        font-size:16px;
+    }
+    .achievement-head span{
+        font-size:19px;
+    }
+    .achievement-gallery {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column */
+        grid-auto-rows: auto;
+        gap: 20px; 
+        width: 100%;
+        max-width: 500px; /* Adjust width if needed */
+        margin: auto;
+    }
+    .topper-image{
+        width:90px;
+        height: 90px;
+        margin-top:0px;
+    }
+    .event-container{
+        padding:3rem 0rem;
+    }
+    .event-head h1 {
+        font-size:22px;
+    }
+    .event-image img{
+        width:250px;
+        height:250px;
+    }
+    .event-data-read{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 0px;
+        gap:8px;
+    }
+    .visit-details{
+        width:90%;
+        padding-top:2.5rem;
+    }
+    .visit-heading h1{
+        font-size:22px;
+    }
+    .visit-school-name p{
+        font-size:18px;
+    }
+    .map-section{
+        height:290px;
+    }
+    .map-section iframe{
+        height:290px;
+    }
+    .marquee-container{
+        height:90px !important;
+        padding-top:-2rem !important;
+        margin-top:-3rem !important;
+    }
+    .marquee-container img{
+        width:150px !important;
+    }
+    .footer-links-div{
+        width:90%;
+        margin: 0 auto;
+        flex-direction: column;
+        gap:30px;
+    }
+    .footer-bottom-section{
+        margin-top:0rem;
+    }
+    .footer-small-para{
+        width:100%;
+    }
+}
