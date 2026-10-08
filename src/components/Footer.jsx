@@ -1,111 +1,381 @@
-import React from 'react'
+import React from "react";
+
 import "../styles/styles.css";
 
-import logo from "../assets/dasmesh_logo_white.png";
+import logo from "../assets/upkar_logo.jpg";
+
 import facebook from "../assets/facebook.png";
 import insta from "../assets/instagram.png";
 import whatsapp from "../assets/whatsapp.png";
 import twitter from "../assets/twitter.png";
 
-
 const Footer = () => {
-  return (
-    <div className='footer-section'>
-       <footer>
-            <div className='footer-upper-section'>
-                <div className='footer-logo-section'>
-                    <div className='footer-logo-name'>
-                        <div className='footer-logo'>
-                            <img src={logo} alt="footer-logo"/>
-                        </div>
-                        <div className='footer-name'>
-                             <div><h1>SRI DASMESH SCHOOL</h1></div>
-                             <div><span> Bazpur, U.S.Nagar (School No.81030)</span></div>
-                             <div><span>Affiliated to cbse (New Delhi) Aff. No 3530030</span></div>
-                        </div>
-                    </div>
-                    <div className='footer-small-para'>
-                       <p>Sri Dasmesh School, Bazpur, fosters learning, values, and growth with top facilities and a student-focused approach.</p>
-                    </div>
-                    <div className='footer-address'>
-                        <div className='footer-address-head'>
-                           <h4>Our Location:</h4>
-                        </div>
-                        <div className='footer-address-para'>
-                            <div><p>Raninagal, Fauji Colony</p></div>
-                            <div><p>Bazpur-262401, U.S. Nagar</p></div>
-                            <div><p>Uttarakhand (India)
-                            </p></div>
-                        </div>
-                    </div>
-                    <div className='footer-social-link'>
-                        <div>
-                           <a href="/"><img src={facebook} alt="facebook"/></a>
-                        </div>
-                        <div>
-                          <a href="/"><img src={insta} alt="instagream"/></a>
-                        </div>
-                        <div>
-                           <a href="/"><img src={whatsapp} alt="whatsaap"/></a>
-                        </div>
-                        <div>
-                           <a href="/"><img src={twitter} alt="twitter"/></a>
-                        </div>
-                    </div>
-                </div>
-                <div className='footer-links-div'>
-                 
-        
-                <div className='footer-Links'>
-                    <div className="footer-links-header">
-                       <h3>Quick Links</h3>
-                    </div>
-                   <div className='footer-links-list'>
-                    <ul>
-                      <li><a href="/">About Us</a></li>
-                      <li><a href="/">Admissions</a></li>
-                      <li><a href="/">Academic Programs</a></li>
-                      <li><a href="/">Gallery</a></li>
-                      <li><a href="/">Contact Us</a></li>
-                    </ul>
-                   </div>
-                </div>
-                <div className='footer-Links'>
-                    <div className="footer-links-header">
-                        <h3>Useful Resources</h3>
-                    </div>
-                    <div className='footer-links-list'>
-                      <ul>
-                        <li><a href="/">Student Portal</a></li>
-                        <li><a href="/">Parent Portal</a></li>
-                        <li><a href="/">Library & E-Learning</a></li>
-                        <li><a href="/">Extracurricular Activities</a></li>
-                        <li><a href="/">Alumni Network</a></li>
-                      </ul>
-                    </div>
-                </div>
-                <div className='footer-Links'>
-                   <div className="footer-links-header">
-                       <h3>Rules & Regulations</h3>
-                   </div>
-                   <div className='footer-links-list'>
-                    <ul>
-                      <li><a href="/">Attendance Policy</a></li>
-                      <li><a href="/">Code of Conduct</a></li>
-                      <li><a href="/">Examination Guidelines</a></li>
-                      <li><a href="/">Fee Structure</a></li>
-                      <li><a href="/">Parent-Teacher Association</a></li>
-                    </ul>
-                   </div>
-                </div>
-              </div>  
-            </div>
-            <div className='footer-bottom-section'>
-                <p>&copy;{new Date().getFullYear()} Sri Dasmesh School, Bazpur. All Rights Reserved.</p>
-            </div>
-       </footer>
-    </div>
-  )
-}
 
-export default Footer
+  return (
+
+    <div className="footer-section">
+
+      <footer>
+
+        {/* ================= FOOTER UPPER ================= */}
+
+        <div className="footer-upper-section">
+
+
+          {/* ================= SCHOOL INFO ================= */}
+
+          <div className="footer-logo-section">
+
+            <div className="footer-logo-name">
+
+              <div className="footer-logo">
+
+                <img
+                  src={logo}
+                  alt="Upkar High School Logo"
+                />
+
+              </div>
+
+
+              <div className="footer-name">
+
+                <div>
+
+                  <h1>
+                    UPKAR HIGH SCHOOL
+                  </h1>
+
+                </div>
+
+                <div>
+
+                  <span>
+                    Rohtak, Haryana
+                  </span>
+
+                </div>
+
+                <div>
+
+                  <span>
+                    Education Towards Transformation
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            {/* DESCRIPTION */}
+
+            <div className="footer-small-para">
+
+              <p>
+                Education Towards Transformation.
+                Upkar High School is committed to
+                providing quality education and
+                nurturing students for a brighter future.
+              </p>
+
+            </div>
+
+
+            {/* ADDRESS */}
+
+            <div className="footer-address">
+
+              <div className="footer-address-head">
+
+                <h4>
+                  Our Location:
+                </h4>
+
+              </div>
+
+
+              <div className="footer-address-para">
+
+                <div>
+                  <p>
+                    Gohana Road, Tej Colony
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    Rohtak, Haryana – 124001
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            {/* CONTACT */}
+
+            <div className="footer-contact">
+
+              <p>
+                <strong>Phone:</strong>{" "}
+                <a href="tel:+919306745120">
+                  +91 93067 45120
+                </a>
+              </p>
+
+              <p>
+                <strong>Email:</strong>{" "}
+                <a href="mailto:uhs392@gmail.com">
+                  uhs392@gmail.com
+                </a>
+              </p>
+
+            </div>
+
+
+            {/* SOCIAL MEDIA */}
+
+            <div className="footer-social-link">
+
+              <div>
+
+                <a href="#">
+
+                  <img
+                    src={facebook}
+                    alt="Facebook"
+                  />
+
+                </a>
+
+              </div>
+
+
+              <div>
+
+                <a href="#">
+
+                  <img
+                    src={insta}
+                    alt="Instagram"
+                  />
+
+                </a>
+
+              </div>
+
+
+              <div>
+
+                <a href="#">
+
+                  <img
+                    src={whatsapp}
+                    alt="WhatsApp"
+                  />
+
+                </a>
+
+              </div>
+
+
+              <div>
+
+                <a href="#">
+
+                  <img
+                    src={twitter}
+                    alt="Twitter"
+                  />
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* ================= FOOTER LINKS ================= */}
+
+          <div className="footer-links-div">
+
+
+            {/* QUICK LINKS */}
+
+            <div className="footer-Links">
+
+              <div className="footer-links-header">
+
+                <h3>
+                  Quick Links
+                </h3>
+
+              </div>
+
+
+              <div className="footer-links-list">
+
+                <ul>
+
+                  <li>
+                    <a href="/about">
+                      About
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/admission">
+                      Admission
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/document">
+                      Document
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/gallery">
+                      Gallery
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/contact">
+                      Contact
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+
+            {/* USEFUL LINKS */}
+
+            <div className="footer-Links">
+
+              <div className="footer-links-header">
+
+                <h3>
+                  Useful Links
+                </h3>
+
+              </div>
+
+
+              <div className="footer-links-list">
+
+                <ul>
+
+                  <li>
+                    <a href="/admission">
+                      Admission
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/document">
+                      Documents
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/gallery">
+                      Gallery
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/contact">
+                      Contact Us
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+
+            {/* CONTACT US */}
+
+            <div className="footer-Links">
+
+              <div className="footer-links-header">
+
+                <h3>
+                  Contact Us
+                </h3>
+
+              </div>
+
+
+              <div className="footer-links-list">
+
+                <ul>
+
+                  <li>
+                    <a href="tel:+919306745120">
+                      +91 93067 45120
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="mailto:uhs392@gmail.com">
+                      uhs392@gmail.com
+                    </a>
+                  </li>
+
+                  <li>
+                    Gohana Road
+                  </li>
+
+                  <li>
+                    Tej Colony, Rohtak
+                  </li>
+
+                  <li>
+                    Haryana – 124001
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        {/* ================= FOOTER BOTTOM ================= */}
+
+        <div className="footer-bottom-section">
+
+          <p>
+            &copy; {new Date().getFullYear()} Upkar High School,
+            Rohtak. All Rights Reserved.
+          </p>
+
+        </div>
+
+      </footer>
+
+    </div>
+
+  );
+
+};
+
+export default Footer;
